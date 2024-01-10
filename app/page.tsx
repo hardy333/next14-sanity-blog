@@ -2,6 +2,12 @@ import Image from "next/image";
 import { simpleBlogCard } from "./_lib/interface";
 import { client, urlFor } from "./_lib/sanity";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "main page title",
+  description: "main page description"
+}
 
 async function getData() {
   const query = `
