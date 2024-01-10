@@ -11,6 +11,10 @@ export const revalidate = 60; // revalidate at most 30 seconds
 export const metadata: Metadata = {
   title: '... This is blog hello hello',
   description: '... lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum ',
+  openGraph: {
+    title: 'Acme',
+    description: 'Acme is a...',
+  },
 }
 
 
