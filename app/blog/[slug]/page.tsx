@@ -1,10 +1,17 @@
 import { fullBlog } from "@/app/_lib/interface";
 import { client, urlFor } from "@/app/_lib/sanity";
 import { PortableText } from "@portabletext/react";
+import { Metadata } from "next";
 import Image from "next/image";
 
 
 export const revalidate = 0; // revalidate at most 30 seconds
+
+
+export const metadata: Metadata = {
+  title: '... This is blog hello hello',
+  description: '... lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum ',
+}
 
 
 async function getFullBlogPost(slug: string) {
