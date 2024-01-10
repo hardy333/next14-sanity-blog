@@ -20,7 +20,6 @@ async function getData() {
 export default async function Home() {
   const data: simpleBlogCard[] = await getData();
 
-console.log(data);
 
   return (
     <main>
@@ -28,7 +27,7 @@ console.log(data);
       <div className="blog-cards-container" style={{width: "900px", margin: "auto"}}>
         {data.map((blogCard, index) => {
           return (
-            <article className="blog-card">
+            <article key={index} className="blog-card">
               <Image
                 src={urlFor(blogCard.titleImage).url()}
                 width={300}
