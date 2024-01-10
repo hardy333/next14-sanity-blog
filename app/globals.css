@@ -2,26 +2,94 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+body{
+  padding: 5rem 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.container{
+  max-width: 900px;
+  margin: auto;
+
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+
+
+.blog-cards-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.blog-card{
+  max-width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.blog-card img{
+  width: 100%;
+  /* height: 400px; */
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+
+  border-radius: 5px;
+
+
+}
+
+.blog-card__title{
+  font-weight: bold;
+  font-size: 20px;
+  width: 100%;
+  max-width: 100%;
+
+
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+
+  overflow: hidden;
+
+
+  margin-bottom: 10px;
+
+}
+
+.blog-card__description{
+  font-size: 14px;
+  margin-bottom: 10px;
+
+
+}
+
+.blog-card a{
+  margin-top: auto;
+  color: blueviolet;
+}
+
+
+.full-blog-post-content h2,
+.full-blog-post-content h3,
+.full-blog-post-content h4,
+.full-blog-post-content h5,
+.full-blog-post-content h6{
+  font-weight: bold;
+  font-size: 20px;
+  margin: 2rem 0 10px;
+
+}
+
+.full-blog-post-content ul{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: decimal;
+
+  margin: 20px 0;
+
 }
