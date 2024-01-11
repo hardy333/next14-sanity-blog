@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 
-export const revalidate = 60; // revalidate at most 30 seconds
+export const revalidate = 10; // revalidate at most 30 seconds
 
 
 export const metadata: Metadata = {
